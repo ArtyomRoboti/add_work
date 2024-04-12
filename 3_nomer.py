@@ -1,9 +1,13 @@
-# Нужна помощь в решение задачи
-val = int(input('Задайте число: '))
+val = int(input("Введите число от 2 до ... "))
+list_ = []
 begin_val = 2
 while begin_val <= val:
-    if begin_val % 2 == 0 or begin_val % 3 == 0:
-        begin_val += 1
-        continue
-    print(begin_val)
+    starts_chek = 2
+    for i in range(val + 1):
+        if begin_val % starts_chek == 0 and begin_val != starts_chek:
+            break
+        starts_chek += 1
+    else:
+        list_.append(begin_val)
     begin_val += 1
+print(list_)

@@ -7,6 +7,7 @@ def custom_write(file_name, strings):
         file.write(f + '/n')
         strings_positions[(number_col, begin_file)] = f
         number_col += 1
+    file.close()
     return strings_positions
 
 
